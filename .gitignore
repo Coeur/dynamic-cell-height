@@ -1,0 +1,7 @@
+# Xcode
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+
+# AppCode
+.idea
