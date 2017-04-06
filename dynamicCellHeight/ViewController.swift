@@ -11,17 +11,24 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
-            tableView.estimatedRowHeight = 10
+            tableView.estimatedRowHeight = 44
             tableView.rowHeight = UITableViewAutomaticDimension
         }
     }
-    
+    /*
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
     }
     override func updateViewConstraints() {
         super.updateViewConstraints()
     }
+    */
 }
 
 class MyTableViewCell: UITableViewCell {
@@ -42,7 +49,7 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return 30
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell

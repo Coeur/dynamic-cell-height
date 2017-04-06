@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,6 +26,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableViewCell" id="EUX-dm-G8l" customClass="MyTableViewCell" customModule="dynamicCellHeight" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -34,34 +35,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycw-f1-90J">
-                                                    <rect key="frame" x="8" y="8" width="359" height="60.5"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mp9-Ll-svv">
+                                                    <rect key="frame" x="20" y="5" width="335" height="34"/>
+                                                    <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="jsp-Zj-Yo5"/>
-                                                        <constraint firstAttribute="height" constant="21" id="v0C-Ca-IYy"/>
+                                                        <constraint firstAttribute="height" constant="34" id="IMq-na-ug3"/>
+                                                        <constraint firstAttribute="height" constant="80" id="cAG-vv-t6Z"/>
                                                     </constraints>
-                                                    <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="v0C-Ca-IYy"/>
+                                                            <exclude reference="cAG-vv-t6Z"/>
                                                         </mask>
                                                     </variation>
-                                                </label>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ycw-f1-90J" secondAttribute="bottom" id="BEV-Qo-EC9"/>
-                                                <constraint firstItem="ycw-f1-90J" firstAttribute="leading" secondItem="UqB-bd-hdj" secondAttribute="leadingMargin" id="MBm-bV-H20"/>
-                                                <constraint firstItem="ycw-f1-90J" firstAttribute="centerY" secondItem="UqB-bd-hdj" secondAttribute="centerY" id="kCk-Xu-JA5"/>
-                                                <constraint firstItem="ycw-f1-90J" firstAttribute="top" secondItem="UqB-bd-hdj" secondAttribute="topMargin" id="vyg-sd-ozF"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ycw-f1-90J" secondAttribute="trailing" id="z9K-Uo-Y7f"/>
+                                                <constraint firstItem="mp9-Ll-svv" firstAttribute="top" secondItem="UqB-bd-hdj" secondAttribute="topMargin" constant="-3" id="WJk-Et-P6w"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="mp9-Ll-svv" secondAttribute="bottom" constant="-3" id="Zbx-Xa-Wex"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="mp9-Ll-svv" secondAttribute="trailing" constant="20" id="DV2-Uf-yV3"/>
+                                            <constraint firstItem="mp9-Ll-svv" firstAttribute="leading" secondItem="EUX-dm-G8l" secondAttribute="leading" constant="20" id="GgV-Qk-7Lv"/>
+                                        </constraints>
                                         <connections>
-                                            <outlet property="aConstraint" destination="jsp-Zj-Yo5" id="Wg9-0B-nRl"/>
-                                            <outlet property="bConstraint" destination="v0C-Ca-IYy" id="A4s-lC-OdL"/>
+                                            <outlet property="aConstraint" destination="IMq-na-ug3" id="DsD-MI-nxJ"/>
+                                            <outlet property="bConstraint" destination="cAG-vv-t6Z" id="bGb-ZM-2cW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -79,6 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
